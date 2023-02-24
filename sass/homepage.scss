@@ -119,3 +119,11 @@ h4 {
   font-weight: 700;
   @include font-size(18px);
 }
+.reference {
+  text-transform: uppercase;
+  font-weight: 700;
+  margin: 50px;
+  padding-bottom: 50px;
+  text-align: center;
+  @include font-size(18px)
+}

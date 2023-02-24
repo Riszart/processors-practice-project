@@ -110,7 +110,7 @@
     border-bottom-left-radius: 35px;
     border-bottom-right-radius: 35px;
     border: solid 2px $color-secondary;
-    transition-duration: 2s;
+    transition-duration: 0.5s;
     overflow: hidden;
     @include media(tablet){
       display: none;
