@@ -1,0 +1,69 @@
+$color-primary: hsl(0, 0%, 0%);
+$color-extra: #3f3f3f;
+$color-secondary: #ffc0cb;
+$color-variable: #138ada;
+
+*{
+  margin: 0;
+  padding: 0;
+}
+@mixin box{
+	padding: 15px 0;
+	margin: 0 50px;
+}
+
+@mixin imgaLogo($url){
+	width: 250px;
+	height: 60px;
+	background-image: url($url);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+@mixin font-size($size) {
+	font-size: $size;
+	font-size: calculateRem($size);
+	line-height: calculateRem($size)*1.5;
+}
+
+@function calculateRem($size){
+	$remSize: $size / 16px;
+	@return $remSize * 1rem;
+}
+
+@function get-opacity($color, $amount) {
+  @return rgba($color, $amount);
+}
+
+.inactive{
+	overflow: hidden;
+	transition-property: height;
+	transition-duration: 1s;
+	transition-timing-function: linear;
+	height: 0!important;
+	padding: 0!important;
+}
+
+@keyframes borderColor{
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+@keyframes changeColor{
+	0% {
+		background-color: $color-secondary;
+		color: $color-primary;
+	}
+	50%{
+		background-color: $color-primary;
+		color: $color-secondary;
+	}
+	100% {
+		background-color: $color-secondary;
+		color: $color-primary;
+	}
+}

@@ -1,0 +1,121 @@
+body {
+  background-color: $color-extra;
+}
+.main--content {
+  width: 80%;
+  margin: 55px auto;
+  border-radius: 5px;
+  padding-top: 20px;
+  background-color: $color-secondary;
+  @include font-size(16px);
+  .section--Profile{
+    @include box;
+  }
+  .section--Biography{
+    @include box;
+  }
+  .section--Drama{
+    @include box
+  }
+  .section--Films{
+    @include box
+  }
+  .section--TV-Programs{
+    @include box
+  }
+  .section--Advertisements{
+    @include box
+  }
+  .section--Curiosities{
+    @include box
+  }
+  .section--Links{
+    @include box
+  }
+  .image-principal {
+    width: 200px;
+    height: 200px;
+    margin: 0px auto;
+    margin-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+    background-color: $color-primary;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-items: center;
+    border-radius: 37px;
+    @include media(tablet){
+      width: 400px;
+      height: 400px;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      height: 550px;
+      width: 550px;
+      background-image: conic-gradient($color-secondary 20deg, transparent 120deg);
+      animation-name: borderColor;
+      animation-duration: 1s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+    }
+    .imgItem {
+      width: 97%;
+      height: 97%;
+      position: absolute;
+      background-image: url();
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      border-radius: 35px;
+    }
+  }
+  .section--Gallery{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px,1fr));
+    gap: 5px;
+    @include box;
+    img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      @include media(tablet){
+        width: 250px;
+        height: 250px;
+        &:hover{
+          filter: grayscale(80%);
+          transform: scale(1.01);
+        }
+      }
+    }
+    @include media(tablet){
+      grid-template-columns: repeat(auto-fill, minmax(250px,1fr));
+    }
+  }
+}
+h4 {
+  padding-left: 45px;
+  border-radius: 5px;
+  background-color: $color-primary;
+  color: $color-secondary;
+  animation-name: changeColor;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  @include font-size(25px);
+
+}
+.all {
+  padding-left: 50px;
+  li {
+    text-transform: capitalize;
+    font-weight: 700;
+    span{
+      font-weight: 400;
+    }
+  }
+}
+.itemSpan{
+  font-weight: 700;
+  @include font-size(18px);
+}

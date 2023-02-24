@@ -1,6 +1,19 @@
-mixin sections(lists, category)
-  div.container 
-    h4=category
-    ul
-      each item in lists
-        li=item
+mixin sections(a, category, lists)
+  div(class="container--"+category, id=""+category)
+    if a === true
+        h4=category
+        ul.all
+          each item in lists
+            li=item[0]
+              span=item[1] 
+    else 
+      h4=category
+      div(class="section--"+category) 
+mixin all(a, category, lists)
+  div(class="container--"+category)
+
+mixin selection(category, lists)
+  h4=category
+  ul.all
+    each item in lists
+      li=item

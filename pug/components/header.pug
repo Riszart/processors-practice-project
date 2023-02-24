@@ -1,8 +1,17 @@
-header
-  div.header--logo: img(src="", alt="logo")
-  nav.header--nav: ul 
+header.header
+  div.header-logo
+  nav.header-nav: ul 
     each itemNav in namesNav 
-      li: a(href="#")=itemNav
-    i.icon-search
-    span search
-  div.burguerIcon
+      li: a(href="#",class=""+itemNav)=itemNav
+    li
+      i.icon__search
+      span search
+  div
+    div.burguerIcon
+      div
+    div.container-close.inactive
+      div.close
+        div.close-icon
+      ul
+        each itenburguer in category
+          li: a(href="#"+itenburguer)=itenburguer

@@ -1,10 +1,12 @@
 footer.footer--principal 
-  div.footer--logo: img
-  div.footer--nav: ul 
-    li Follow me: 
-    each itemfooter in namesNav
-      li: a(href="#")=itemfooter
-  div.social--nav: ul 
-    each itemSocial in socialNav
-      li: a(href="#")=itemSocial
-div fsadfgdsgdf
+  div.container-logo
+    div.footer-logo
+    div.footer-page: ul 
+      each itemfooter in namesNav
+        li: a()=itemfooter
+  div.footer-nav
+    div.social-nav
+      ul
+        li link social: 
+        each itemSocial in socialNav
+          li: a(href="#")=itemSocial

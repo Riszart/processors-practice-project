@@ -1,32 +1,15 @@
 extend components/template.pug
 block contents
-  section
-    div.content--profile
-      h4 profile
-      ul
-        each itemProfile in profileList
-          li=itemProfile
-            span
-      img(src="", alt="")
-    div.content--biography 
-      h4 biography
-      p
-    div.content--drama 
-      h4 drama
-      ul
-        li
-        li
-        li
-        li
-    div.content--films 
-      h4 films
-      ul 
-        li 
-        li 
-    div.content--programs
-      h4 TV programs 
-      ul 
-        li
-        li
-    div.content--add
-    div 
+  section.main--content.inactive
+    div.image-principal
+      div.imgItem
+    +sections(false, 'Profile', profileList)
+    +sections(false, 'Biography')
+    +sections(false, 'Drama')
+    +sections(false, 'Films')
+    +sections(false, 'TV-Programs')
+    +sections(false, 'Advertisements')
+    +sections(false, 'Curiosities')
+    +selection('Links', socialNav)
+    +sections(false, 'Gallery')
+  

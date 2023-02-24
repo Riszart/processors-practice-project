@@ -1,0 +1,163 @@
+.header{
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $color-primary;
+  &-logo {
+    margin: auto;
+    @include imgaLogo("/img/logo.jpg");
+    @include media(tablet){
+      margin-left: 25px;
+    }
+  }
+  &-nav {
+    ul {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 65px;
+      right: 0;
+      @include media(tablet){
+        display: block;
+        top: 0;
+        position: relative;
+        margin-right: 25px;
+        margin-bottom: 0;
+      }
+      li {
+        margin: 0 auto;
+        list-style: none;
+        text-decoration: none;
+        @include media(tablet){
+          margin: 0 0 0 25px;
+        }
+        a {
+          text-transform: uppercase;
+          color: $color-secondary;
+          @include font-size(20px);
+        }
+      }
+      :nth-child(5) {
+        display: none;
+      }
+      :hover {
+        color: $color-variable;
+      }
+      @include media(tablet){
+        display: flex;
+      }
+    }
+  }
+  .burguerIcon {
+    display: block;
+    height: 50px;
+    width: 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: $color-secondary;
+    div {
+      width: 40px;
+      height: 5px;
+      position: absolute;
+      top: 22px;
+      left: 5px;
+      border-radius: 3px;
+      background-color: $color-primary;
+    }
+    ::after{
+      content: " ";
+      width: 40px;
+      height: 5px;
+      position: absolute;
+      top: 10px;
+      left: 0px;
+      border-radius: 3px;
+      background-color: $color-primary;
+    }
+    ::before{
+      content: " ";
+      width: 40px;
+      height: 5px;
+      position: absolute;
+      top: -10px;
+      left: 0px;
+      border-radius: 3px;
+      background-color: $color-primary;
+    }
+    @include media(tablet){
+      display: none;
+    }
+  }
+
+  .container-close {
+    display: block;
+    transition-property: height;
+    transition-duration: 5s;
+    transition-timing-function: linear;
+    height: 550px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 5px;
+    z-index: 100;
+    background-color: $color-extra;
+    border-bottom-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+    border: solid 2px $color-secondary;
+    transition-duration: 2s;
+    overflow: hidden;
+    @include media(tablet){
+      display: none;
+    }
+    ul {
+      li {
+        width: 250px;
+        padding: 10px 100px;
+        list-style: none;
+        a {
+          color: $color-secondary;
+          text-transform: capitalize;
+          text-align: center;
+          @include font-size(20px);
+        }
+      }
+    }
+    .close {
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      right: 5px;
+      top: 5px;
+      background-color: $color-secondary;
+      border-radius: 10px;
+      &-icon {
+        width: 40px;
+        height: 5px;
+        position: absolute;
+        top: 18px;
+        left: 0px;
+        transform: rotate(45deg);
+        background-color: $color-primary;
+        border-radius: 3px;
+
+      }
+      ::before {
+        content: " ";
+        width: 40px;
+        height: 5px;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        transform: rotate(90deg);
+        background-color: $color-primary;
+        border-radius: 3px;
+      }
+    }
+  }
+}
