@@ -806,6 +806,38 @@ output {
     display: block;
   }
 }
+.footer--principal .author-web {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 30px;
+  background-color: #00ff75;
+}
+.footer--principal .author-web a {
+  text-transform: capitalize;
+  font-weight: bold;
+}
+.footer--principal .author-web p {
+  padding: 0;
+  margin: 0;
+  margin-right: 15px;
+  color: black;
+  font-weight: bold;
+}
 
 body {
   background-color: #3f3f3f;
